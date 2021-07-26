@@ -23,6 +23,16 @@ public class Main {
             int number3 = (number%1000 - number%100)/100;
             int number4 = (number%10000 - number%1000)/1000;
 
+            while (number1==number2 || number1==number3 || number1==number4 || number2==number3 || number2==number4
+            || number3==number4) {
+                number = rand.nextInt(9000) + 1000;
+
+                number1 = number%10;
+                number2 = (number%100 - number%10)/10;
+                number3 = (number%1000 - number%100)/100;
+                number4 = (number%10000 - number%1000)/1000;
+            }
+
             int[] guessArray = {guess1, guess2, guess3, guess4};
             int[] numberArray = {number1, number2, number3, number4};
 
