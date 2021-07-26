@@ -23,6 +23,21 @@ public class Main {
             int number3 = (number%1000 - number%100)/100;
             int number4 = (number%10000 - number%1000)/1000;
 
+            int[] guessArray = {guess1, guess2, guess3, guess4};
+            int[] numberArray = {number1, number2, number3, number4};
+
+            for (int i=0; i<guessArray.length; i++) {
+                for (int j=0; j<numberArray.length; j++) {
+                    if (guessArray[i] == numberArray[j]) {
+                        correctNumber += 1;
+                    }
+
+                    if (guessArray[i] == numberArray[i]) {
+                        correctPlace += 1;
+                    }
+                }
+            }
+
         }
     }
 }
