@@ -38,6 +38,15 @@ public class Main {
                 }
             }
 
+            if (correctNumber==0 && correctPlace==0) {
+                System.out.println("None of the numbers are correct.");
+            } else if (correctPlace == 0) {
+                System.out.println(correctNumber + " of the numbers are correct and none of them are in the right place.");
+            } else {
+                System.out.println(correctNumber  + " of the numbers are correct and " + correctPlace + "of them are in the right place.");
+            }
+
+            guess = console.nextInt();
         }
     }
 }
