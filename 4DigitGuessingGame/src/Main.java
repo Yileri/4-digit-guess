@@ -31,10 +31,9 @@ public class Main {
                     if (guessArray[i] == numberArray[j]) {
                         correctNumber += 1;
                     }
-
-                    if (guessArray[i] == numberArray[i]) {
-                        correctPlace += 1;
-                    }
+                }
+                if (guessArray[i] == numberArray[i]) {
+                    correctPlace += 1;
                 }
             }
 
@@ -43,10 +42,12 @@ public class Main {
             } else if (correctPlace == 0) {
                 System.out.println(correctNumber + " of the numbers are correct and none of them are in the right place.");
             } else {
-                System.out.println(correctNumber  + " of the numbers are correct and " + correctPlace + "of them are in the right place.");
+                System.out.println(correctNumber  + " of the numbers are correct and " + correctPlace + " of them are in the right place.");
             }
 
             guess = console.nextInt();
         }
+
+        System.out.println("You have found the number!");
     }
 }
